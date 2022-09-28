@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Usuarios</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Bienvenido a la vista de usuarios</h1>
+    <p>En esta vista, se muestran los usuarios con acceso a la app</p>
+
+
+  </body>
+</html>
