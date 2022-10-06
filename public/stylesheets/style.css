@@ -3,6 +3,17 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+p {
+	
+	color: white;
+}
+
+html {  
+
+	background-color: #6C1D5D; 
+	
+}
+
 a {
   color: #00B7FF;
 }
