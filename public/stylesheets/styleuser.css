@@ -7,6 +7,11 @@ p {
 	
 	color: white;
 }
+h2 {
+	font-size: 170%;
+	color: white;
+	
+}
 
 html {  
 
@@ -14,10 +19,6 @@ html {
 	
 }
 
-h2{
-	font-size: 170%
-	
-}
 
 a {
   color: #00B7FF;
