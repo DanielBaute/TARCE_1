@@ -9,9 +9,23 @@
   
 	<h2>Database Results</h2>
     
+	
+     <label for="role">Elige un rol:</label>
+      <select name="role" id="role">
+		<option value="Top">Top</option>
+		<option value="Jungle">Jungle</option>
+		<option value="Mid">Mid</option>
+		<option value="Adc">Adc</option>
+		<option value="Support">Support</option>
+	</select>
+	<br><br>
+	<input type="submit" value="Submit">
+	</form>
+	
+	
     <ul>
 		<%results.forEach(function(r){ %>
-			<li><%= r.id %> - <%= r.name %></li>
+			<li><%= r.role %> - <%= r.name %> - <%= r.tier %> - <%= r.wrate %></li>
 		<% }); %>
 	
 	</ul>
