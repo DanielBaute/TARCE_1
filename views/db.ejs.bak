@@ -5,9 +5,13 @@
     <link rel='stylesheet' href='/stylesheets/flowpapa.css' />
   </head>
   <body>
+  
+	<h2>Database Results<h2>
     
-    <p>Bienvenido a nuestra base de datos</p>
-	<p>Disculpen, aún estamos en obras</p>
+    <ul>
+		<%results.forEach(function(r){ %>
+			<li><%= r.id %> - <%= r.name %></li>
+		<% }); %>
 	
 	<a href="https://sat-problema-1.herokuapp.com">
 		<button>Página principal</button>
