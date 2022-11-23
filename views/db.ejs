@@ -21,17 +21,9 @@
 	
 	
     <ul>
-		<label for="role">Elige un rol:</label>
-      <select name="role" id="role">
-		<option value="Top">Top</option>
-		<option value="Jungle">Jungle</option>
-		<option value="Mid">Mid</option>
-		<option value="Adc">Adc</option>
-		<option value="Support">Support</option>
-	</select>
-	
+		
 		<%results.forEach(function(r){ %>
-			<%if(r.role == role){ %>
+			<%if(r.role == 'Top'){ %>
 				<li><%= r.role %> - <%= r.name %> - <%= r.tier %> - <%= r.wrate %></li>
 				<%}%>
 			
