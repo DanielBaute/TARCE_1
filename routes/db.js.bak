@@ -14,12 +14,12 @@ var router = express.Router();
 /* GET users listing. */
 
 
-router.get('/db', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('views/db', results );
+      res.render('db', results );
       client.release();
     } catch (err) {
       console.error(err);

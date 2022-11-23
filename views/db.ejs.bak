@@ -2,19 +2,20 @@
 
 <html>
   <head>
-    <link rel='stylesheet' href='/stylesheets/flowpapa.css' />
+    <title>Usuarios</title>
+    <link rel='stylesheet' href='/stylesheets/styleuser.css' />
   </head>
   <body>
   
-	<h2>Database Results<h2>
+	<h2>Database Results</h2>
     
     <ul>
 		<%results.forEach(function(r){ %>
 			<li><%= r.id %> - <%= r.name %></li>
 		<% }); %>
 	
-	<a href="https://sat-problema-1.herokuapp.com">
-		<button>Página principal</button>
-	</a>
+	</ul>
+	
+	
   </body>
 </html>
