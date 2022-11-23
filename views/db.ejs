@@ -22,7 +22,7 @@
 	
     <ul>
 		<%results.forEach(function(r){ %>
-			<%if(r.role == 'Top'){ %>
+			<%if(r.role == role){ %>
 				<li><%= r.role %> - <%= r.name %> - <%= r.tier %> - <%= r.wrate %></li>
 				<%}%>
 			
