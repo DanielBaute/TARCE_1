@@ -9,7 +9,7 @@
   
 	<h2>Database Results</h2>
     
-	<table class="tablaTop">
+	<table class="tablaTop" border="1px" >
 	<tr>
 		<th>Role</th>
 		<th>Name</th>
