@@ -2,38 +2,88 @@
 
 <html>
   <head>
-    <title>Usuarios</title>
+    <title>LoL Tier List</title>
     <link rel='stylesheet' href='/stylesheets/styleuser.css' />
   </head>
   <body>
   
-	<h2>Database Results</h2>
-    
-
-     <label for="role">Elige un rol:</label>
-      <select name="role" id="role">
-		<option value="Top">Top</option>
-		<option value="Jungle">Jungle</option>
-		<option value="Mid">Mid</option>
-		<option value="Adc">Adc</option>
-		<option value="Support">Support</option>
-	</select>
-	
-	<body>
-		<button type="button"> <img src="https://bit.ly/3BF9FD7" height ="80" width="100" /></button>
-	</body> 
-	
-    <ul>
+	<h2>League of Legends Champions Tier List</h2>
+    <style>
+		.contenedor-imagenes {
+		display: flex;
+		}
 		
-		<%results.forEach(function(r){ %>
-			<%if(r.role == 'Top'){ %>
-				<li><%= r.role %> - <%= r.name %> - <%= r.tier %> - <%= r.wrate %></li>
-				<%}%>
-			
-		<% }); %>
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
 
-	</ul>
+	th, td {
+		text-align: left;
+		padding: 8px;
+	}	
+
+	tr:nth-child(even) {
+		background-color: #D6EEEE;
+	}
+  
+	</style>
+  
+	<div class="contenedor-imagenes">
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/tier">
+    	<input type="image" src="https://i.pinimg.com/474x/ca/19/98/ca199818f18f7a6e778be38d733516c7.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/top">
+    	<input type="image" src="https://ih1.redbubble.net/image.2355782909.2767/mp,504x516,gloss,f8f8f8,t-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/jungle">
+    	<input type="image" src="https://ih1.redbubble.net/image.3271050893.7343/pp,840x830-pad,1000x1000,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/mid">
+    	<input type="image" src="https://ih1.redbubble.net/image.2354235969.4306/mp,504x498,matte,f8f8f8,t-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/bot">
+    	<input type="image" src="https://ih1.redbubble.net/image.2354182162.2636/pp,504x498-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/support">
+    	<input type="image" src="https://ih1.redbubble.net/image.2354270772.5334/st,small,507x507-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
 	
 	
+	</div> 
+    
+	<br></br>
+	
+	<table class="tablaMid" border="1px" >
+	<tr>
+		<th>Role</th>
+		<th>Name</th>
+		<th>Tier</th>
+		<th>Win Rate</th>
+	</tr>
+	
+	<%results.forEach(function(r){ %>
+		<%if(r.role == 'Mid'){ %>
+		<tr>
+			<td><%= r.role %></td>
+			<td><%= r.name %></td>
+			<td><%= r.tier %></td>
+			<td><%= r.wrate %></td>
+		</tr>
+		<% } %>
+		<% }); %>
+	</table>
+	
+	<br></br>
+	
+	<a href="https://calm-mesa-41641.herokuapp.com/" >
+		<button>Página principal</button>
+	</a>
   </body>
 </html>
