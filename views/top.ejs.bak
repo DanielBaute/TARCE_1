@@ -20,9 +20,10 @@
 	<%results.forEach(function(r){ %>
 		<%if(r.role == 'Top'){ %>
 		<tr>
-			<td>Soleado</td>
-			<td>Mayormente soleado</td>
-			<td>Parcialmente nublado</td>
+			<td><%= r.role %></td>
+			<td><%= r.name %></td>
+			<td><%= r.tier %></td>
+			<td><%= r.wrate %></td>
 		</tr>
 		<% } %>
 		<% }); %>
