@@ -8,7 +8,7 @@
     
     <p>Bienvenido a nuestra nueva vista!</p>
 	<p>Disculpen, aún estamos en obras</p>
-	<a href="https://calm-mesa-41641.herokuapp.com/">
+	<a href="https://sat-problema-1.herokuapp.com">
 		<button>Página principal</button>
 	</a>
   </body>
