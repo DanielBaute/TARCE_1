@@ -9,7 +9,25 @@
   
 	<h2>Database Results</h2>
     
-
+	<table class="tablaTop">
+	<tr>
+		<th>Role</th>
+		<th>Name</th>
+		<th>Tier</th>
+		<th>Win Rate</th>
+	</tr>
+	
+	<%results.forEach(function(r){ %>
+		<%if(r.role == 'Top'){ %>
+		<tr>
+			<td><%= r.role %></td>
+			<td><%= r.name %></td>
+			<td><%= r.tier %></td>
+			<td><%= r.wrate %></td>
+		</tr>
+		<% } %>
+		<% }); %>
+	</table>
 	
     <ul>
 		

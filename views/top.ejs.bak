@@ -9,19 +9,24 @@
   
 	<h2>Database Results</h2>
     
-
-     <label for="role">Elige un rol:</label>
-      <select name="role" id="role">
-		<option value="Top">Top</option>
-		<option value="Jungle">Jungle</option>
-		<option value="Mid">Mid</option>
-		<option value="Adc">Adc</option>
-		<option value="Support">Support</option>
-	</select>
+	<table class="tablaTop">
+	<tr>
+		<th>Role</th>
+		<th>Name</th>
+		<th>Tier</th>
+		<th>Win Rate</th>
+	</tr>
 	
-	<body>
-		<button type="button"> <img src="https://bit.ly/3BF9FD7" height ="80" width="100" /></button>
-	</body> 
+	<%results.forEach(function(r){ %>
+		<%if(r.role == 'Top'){ %>
+		<tr>
+			<td>Soleado</td>
+			<td>Mayormente soleado</td>
+			<td>Parcialmente nublado</td>
+		</tr>
+		<% } %>
+		<% }); %>
+	</table>
 	
     <ul>
 		
