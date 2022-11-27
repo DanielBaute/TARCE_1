@@ -60,7 +60,7 @@
     
 	<br></br>
 	
-	<table class="tablaTop" border="1px" >
+	<table class="tablaBot" border="1px" >
 	<tr>
 		<th>Role</th>
 		<th>Name</th>
@@ -69,7 +69,7 @@
 	</tr>
 	
 	<%results.forEach(function(r){ %>
-		<%if(r.role == 'Top'){ %>
+		<%if(r.role == 'Bot'){ %>
 		<tr>
 			<td><%= r.role %></td>
 			<td><%= r.name %></td>
