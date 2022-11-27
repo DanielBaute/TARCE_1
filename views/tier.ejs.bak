@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Usuarios</title>
+    <link rel='stylesheet' href='/stylesheets/styleuser.css' />
+  </head>
+  <body>
+  
+	<h2>Leagoe of legends </h2>
+    <style>
+		.contenedor-imagenes {
+		display: flex;
+		}
+	</style>
+  
+	<div class="contenedor-imagenes">
+	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+    	<input type="image" src="https://ih1.redbubble.net/image.2355782909.2767/mp,504x516,gloss,f8f8f8,t-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+    	<input type="image" src="https://ih1.redbubble.net/image.3271050893.7343/pp,840x830-pad,1000x1000,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+    	<input type="image" src="https://ih1.redbubble.net/image.2354235969.4306/mp,504x498,matte,f8f8f8,t-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+    	<input type="image" src="https://ih1.redbubble.net/image.2354182162.2636/pp,504x498-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+    	<input type="image" src="https://ih1.redbubble.net/image.2354270772.5334/st,small,507x507-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	</div> 
+  </body>
+</html>

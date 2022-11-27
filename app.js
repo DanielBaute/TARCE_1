@@ -8,7 +8,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var mivistaRouter = require('./routes/mivista');
 
-var dbRouter = require('./routes/db');
+var tierRouter = require('./routes/tier');
+var topRouter = require('./routes/top');
+var jungleRouter = require('./routes/jungle');
+var midRouter = require('./routes/mid');
+var botRouter = require('./routes/bot');
+var supportRouter = require('./routes/support');
 
 var app = express();
 
@@ -25,7 +30,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/mivista', mivistaRouter);
-app.use('/db', dbRouter);
+
+app.use('/tier', tierRouter);
+app.use('/top', topRouter);
+app.use('/jungle', jungleRouter);
+app.use('/mid', midRouter);
+app.use('/bot', botRouter);
+app.use('/support', botRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

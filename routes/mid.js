@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM lol_table');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('db', results );
+      res.render('mid', results );
       client.release();
     } catch (err) {
       console.error(err);
