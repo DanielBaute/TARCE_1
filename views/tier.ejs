@@ -2,39 +2,84 @@
 
 <html>
   <head>
-    <title>Usuarios</title>
+    <title>LoL Tier List</title>
     <link rel='stylesheet' href='/stylesheets/styleuser.css' />
   </head>
   <body>
   
-	<h2>League of Legends</h2>
+	<h2>League of Legends Chmapions Tier List</h2>
     <style>
 		.contenedor-imagenes {
 		display: flex;
 		}
+		
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th, td {
+		text-align: left;
+		padding: 8px;
+	}	
+
+	tr:nth-child(even) {
+		background-color: #D6EEEE;
+	}
+  
 	</style>
   
 	<div class="contenedor-imagenes">
-	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/tier">
+    	<input type="image" src="https://static.wikia.nocookie.net/leagueoflegends/images/1/12/League_of_Legends_Icon.png/revision/latest/scale-to-width-down/250?cb=20150402234343" style="border: double;" height ="100" width="100"/>
+    </form>
+	
+	<form action="https://calm-mesa-41641.herokuapp.com/top">
     	<input type="image" src="https://ih1.redbubble.net/image.2355782909.2767/mp,504x516,gloss,f8f8f8,t-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
     </form>
 	
-	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+	<form action="https://calm-mesa-41641.herokuapp.com/jungle">
     	<input type="image" src="https://ih1.redbubble.net/image.3271050893.7343/pp,840x830-pad,1000x1000,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
     </form>
 	
-	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+	<form action="https://calm-mesa-41641.herokuapp.com/mid">
     	<input type="image" src="https://ih1.redbubble.net/image.2354235969.4306/mp,504x498,matte,f8f8f8,t-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
     </form>
 	
-	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+	<form action="https://calm-mesa-41641.herokuapp.com/bot">
     	<input type="image" src="https://ih1.redbubble.net/image.2354182162.2636/pp,504x498-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
     </form>
 	
-	<form action="https://calm-mesa-41641.herokuapp.com/mivista">
+	<form action="https://calm-mesa-41641.herokuapp.com/support">
     	<input type="image" src="https://ih1.redbubble.net/image.2354270772.5334/st,small,507x507-pad,600x600,f8f8f8.jpg" style="border: double;" height ="100" width="100"/>
     </form>
 	
+	
 	</div> 
+    
+	
+	
+	<table class="tablaTier" border="1px" >
+	<tr>
+		<th>Role</th>
+		<th>Name</th>
+		<th>Tier</th>
+		<th>Win Rate</th>
+	</tr>
+	
+	<%results.forEach(function(r){ %>
+		
+		<tr>
+			<td><%= r.role %></td>
+			<td><%= r.name %></td>
+			<td><%= r.tier %></td>
+			<td><%= r.wrate %></td>
+		</tr>
+		
+		<% }); %>
+	</table>
+	
+	<%if(r.role == 'Top'){ %>
   </body>
 </html>

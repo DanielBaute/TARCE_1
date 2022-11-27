@@ -5,10 +5,30 @@
     <title>Usuarios</title>
     <link rel='stylesheet' href='/stylesheets/styleuser.css' />
   </head>
+  <style>
+  .contenedor-imagenes {
+		display: flex;
+		}
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th, td {
+		text-align: left;
+		padding: 8px;
+	}	
+
+	tr:nth-child(even) {
+		background-color: #D6EEEE;
+	}
+  </style>
   <body>
   
 	<h2>Database Results</h2>
     
+	
+	
 	<table class="tablaTop" border="1px" >
 	<tr>
 		<th>Role</th>
@@ -29,16 +49,6 @@
 		<% }); %>
 	</table>
 	
-    <ul>
-		
-		<%results.forEach(function(r){ %>
-			<%if(r.role == 'Top'){ %>
-				<li><%= r.role %> - <%= r.name %> - <%= r.tier %> - <%= r.wrate %></li>
-				<%}%>
-			
-		<% }); %>
-
-	</ul>
 	
 	
   </body>
